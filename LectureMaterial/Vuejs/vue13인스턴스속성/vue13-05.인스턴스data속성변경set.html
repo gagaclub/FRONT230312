@@ -112,3 +112,58 @@
   </body>
 
 </html>
+
+
+<!-- vue 플러그인 임포트   -->
+<script src="https://unpkg.com/vue@2.7.8/dist/vue.js">/* vue 플러그인 임포트 */</script>
+<script>
+  new Vue({
+    /* edtmc^2w */
+    el: '#app',
+    data: {
+      /* 인스턴스 안에서 사용되는 변수 등록, 공유 변수 */
+      arr: [1, 2, 3, 4, 5],
+    },
+    //template: ``,
+    methods: {
+      /* 이벤트 핸들러 등록 + 일반 함수 */
+      change1(e) {
+        console.log(e.target);
+        // this.$data.arr[0] = 100;
+        this.$data.arr.splice(0, 1, 100); //0번째부터 1개 지우고 그 자리에 100이라는 값을 넣어라.
+        console.log(this.$data.arr);
+        debugger;
+      },
+      change2(e) {
+        console.log(e.target);
+        this.$data.arr.splice(1, 1, 300); //1번째부터 1개 지우고 그 자리에 300이라는 값을 넣어라.
+        console.log(this.$data.arr);
+      },
+      change3(e) {
+        console.log(e.target);
+        // this.$data.arr.splice(0, 2); //0번째부터 2개 지워라
+        // 배열 복제
+        const newarr = this.$data.arr.filter((value, index, array) => {
+          debugger;
+          if (index >= 2)
+            return true;
+          else
+            return false;
+        });
+        // 할당
+        this.$data.arr = newarr;
+        console.log(this.$data.arr);
+      },
+      change4(e) {
+        console.log(e.target);
+        // this.$data.arr.unshift(500); //0번째에 500이라는 값 추가
+        // this.$data.arr.push(70); //마지막에 70이라는 값 추가
+        // 배열복제
+        const newarr = [500, ...this.$data.arr, 70];
+        // 할당
+        this.$data.arr = newarr;
+      }
+    },
+  });
+
+</script>

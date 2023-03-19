@@ -12,3 +12,10 @@
 */
 
 // Module2.js
+
+import { a, c } from './Module1.js';
+debugger;
+
+console.log(a);
+console.log(c);
+
