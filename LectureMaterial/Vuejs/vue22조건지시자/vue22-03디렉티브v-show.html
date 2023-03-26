@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
     <title>Vue Template - Data Binding</title>
 
     <!-- CSS import -->
-    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet"
+      href="../css/reset.css">
 
     <style>
-        .container {
-            color: red;
-            font-weight: bold;
-            font-size: 20pt;
-        }
+      .container {
+        color: red;
+        font-weight: bold;
+        font-size: 20pt;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <xmp>
         [1] v-if 디렉티브 :
         [2] v-else 디렉티브 :
@@ -39,17 +41,17 @@
 
     <h2>v-show 연습</h2>
     <div id="app1">
-        <button v-on:click="clickBind">클릭</button>
-        <!-- will render 'Condition met' -->
-        <div id="example">
-            <h1 v-show="a">Condition met</h1>
-        </div>
-        <!-- will render 'This is shown' -->
-        <div id="example">
-            <h1 v-show="!a">This is hidden</h1>
-            <h1 v-show="a">This is shown</h1>
-        </div>
+      <button v-on:click="clickBind">클릭</button>
+      <!-- will render 'Condition met' -->
+      <div id="example">
+        <h1 v-show="a">Condition met</h1>
+      </div>
+      <!-- will render 'This is shown' -->
+      <div id="example">
+        <h1 v-show="!a">This is hidden</h1>
+        <h1 v-show="a">This is shown</h1>
+      </div>
     </div>
-</body>
+  </body>
 
 </html>
