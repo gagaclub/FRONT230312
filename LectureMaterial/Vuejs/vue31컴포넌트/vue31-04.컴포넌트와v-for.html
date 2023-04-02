@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
     <title>Vue Template - Directives</title>
 
-</head>
+  </head>
 
-<body>
+  <body>
     <xmp>
         Vue.js v-for 지시자와 props 를 사용하는 방법에 대해서 학습한다.
 
@@ -41,18 +42,19 @@
 
     <h2>컴포넌트와 반복 지시자</h2>
     <div id="app">
-        <p>
-            <button v-on:click="clickAddBox">박스 추가</button>
-        </p>
-        <p>
-            <b v-for="(val, i) in arr" v-bind:key="i">
-                {{val}}
-                <component-box v-bind:num="val"></component-box>
-            </b>
-        </p>
+      <p>
+        <button v-on:click="clickAddBox">박스 추가</button>
+      </p>
+      <p>
+        <b v-for="(val, i) in arr"
+          v-bind:key="i">
+          {{val}}
+          <component-box v-bind:num="val"></component-box>
+        </b>
+      </p>
     </div>
     <hr>
 
-</body>
+  </body>
 
 </html>
