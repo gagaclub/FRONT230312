@@ -1,6 +1,6 @@
 "use strict";
 
-var _Module = require("./Module1");
+var _Module = require("./Module1.js");
 /*
   CommonJS 모듈 방식 : require 사용
     var module = require('./MyModule');

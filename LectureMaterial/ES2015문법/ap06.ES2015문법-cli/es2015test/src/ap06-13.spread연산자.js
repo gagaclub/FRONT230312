@@ -46,3 +46,26 @@ console.log(rest); //['화진포','송지호','청초호']
 // ...cityrest => rest 연산자 / ...east, ...west => spread 연산자
 const [city1, ...cityrest] = [...east, ...west];
 console.log(cityrest); //['K', 'T', 'N', 'C', 'G']
+
+debugger;
+const morning = {
+  breacfast: '미역국',
+  lunch: '삼치구이',
+};
+
+const dinner = '스테이크';
+
+const meals = {
+  ...morning,
+  dinner,
+};
+
+console.log(meals);
+
+// ...props  === ...msg
+function childComponent(...props) {
+  console.log(props);
+}
+
+const msg = 'passed from Parent Component';
+childComponent(...msg);
