@@ -59,7 +59,7 @@
               ReactDOM.render(<컴포넌트이름 />, document.getElementById('app'));
 
           단계3.Component 만들기
-            단축키: rfc
+            단축키: rfchtml
     </xmp>
     <hr />
 
@@ -69,7 +69,6 @@
   </body>
 
 </html>
-
 
 <script src="https://unpkg.com/@babel/standalone/babel.js"
   crossorigin="anonymous">
@@ -91,27 +90,30 @@
   // ReactDOM.render( 인자1, 인자2 )
   ReactDOM.render(<Comp name={'Hello'} />, document.getElementById('app'));
 
-  // 단축키 rfc
-  function Comp({
-    ...props
-  }) {
+  // 단축키 rfchtml
+  function Comp({ ...props }) {
     // useState 를 사용한 컴포넌트의 상태값 설정
     const [mesg, setMesg] = useState('hi!!!'); // 상태값이 기본타입인 경우
+    console.log(setMesg);
 
     // 이벤트 핸들러 작성.
     const handler = (e) => {
       // 이벤트 핸들러는 화살표 함수로 만든다
       console.log(e.target);
-      setMesg('변경하려고 하는 값');
+
+      // useState 로 만든 상태(변수) 값을 바꾸시오.
+      // ===> setter 메서드를 사용해야 한다.
+      // mesg = '변경하려고하는 값';
+      // console.log(setMesg);
+      setMesg('변경하려고하는 값');
     };
 
     // JSX로 화면 만들기. 조건부 렌더링: https://ko.reactjs.org/docs/conditional-rendering.html
     return (
       <div onClick={handler}>
-        {props.name},{mesg}
-      </div>
+        {props.name}, {mesg}
+      </div >
     );
   }
-
 
 </script>

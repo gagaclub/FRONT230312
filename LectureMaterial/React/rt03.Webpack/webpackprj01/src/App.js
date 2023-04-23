@@ -4,11 +4,6 @@ import Header from './Header';
 import Footer from './Footer';
 
 function App({ ...props }) {
-  // 이벤트 핸들러 작성.
-  const handler = (e) => {
-    // 이벤트 핸들러는 화살표 함수로 만든다
-    console.log(e.target);
-  };
   // JSX로 화면 만들기. 조건부 렌더링: https://ko.reactjs.org/docs/conditional-rendering.html
   return (
     <div>
